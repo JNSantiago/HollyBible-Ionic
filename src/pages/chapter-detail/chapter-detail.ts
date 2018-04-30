@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, PopoverController } from 'ionic-angular';
 import { PopoverPage } from '../popover/popover';
 
+import { LottieAnimationViewModule } from 'ng-lottie';
+
 @IonicPage()
 @Component({
   selector: 'page-chapter-detail',
@@ -11,6 +13,7 @@ export class ChapterDetailPage {
   chapter: any = [];
   bookName: string = '';
   chapterNumber: string = '';
+  lottieConfig:any;
 
   constructor(
     public navCtrl: NavController, 
@@ -20,6 +23,8 @@ export class ChapterDetailPage {
     this.chapter = navParams.get('chapter');
     this.bookName = navParams.get('bookName');
     this.chapterNumber = navParams.get('chapterNumber');
+
+    LottieAnimationViewModule.forRoot();
   }
 
   selectVersicle(versicle) {
@@ -27,6 +32,15 @@ export class ChapterDetailPage {
     popover.present({
       ev: versicle
     });
+
+    popover.onDidDismiss(data => {
+      this.lottieConfig = {
+        path: 'assets/bookmark.json',
+        autoplay: true,
+        loop: false
+      }
+      setTimeout(() => this.lottieConfig = null, 2000);
+    })
   }
 
   closeModal() {

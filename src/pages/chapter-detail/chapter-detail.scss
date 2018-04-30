@@ -1,3 +1,9 @@
 page-chapter-detail {
-
+    .lottieMarked {
+        position: absolute; 
+        z-index: 12;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
 }

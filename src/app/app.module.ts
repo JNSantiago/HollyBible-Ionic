@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+import { LottieAnimationViewModule } from 'ng-lottie';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -22,7 +23,8 @@ import { PopoverPage } from '../pages/popover/popover';
     BrowserModule,
     IonicModule.forRoot(MyApp),
     ComponentsModule,
-    HttpClientModule
+    HttpClientModule,
+    LottieAnimationViewModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
