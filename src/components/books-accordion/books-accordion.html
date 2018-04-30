@@ -1,0 +1,17 @@
+<ion-card>
+  <ion-card-header (click)="toggleAccordion()">
+    <ion-grid>
+      <ion-row>
+        <ion-col class="abbrev col col-20"><span>{{book.abbrev.toUpperCase()}}</span></ion-col>
+        <ion-col class="book-name col col-80">{{book.name}}</ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card-header>
+  <ion-card-content #cardcontent>
+    <ion-list class="row">
+      <ion-item class="col col-20" style="padding: 10px" *ngFor="let chapter of chapters" (click)="detailChapter(chapter)">
+        <span class="chapter">{{chapter + 1}}</span>
+      </ion-item>
+    </ion-list>
+  </ion-card-content>
+</ion-card>

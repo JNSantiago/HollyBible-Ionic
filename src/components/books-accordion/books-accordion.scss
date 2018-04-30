@@ -1,0 +1,39 @@
+books-accordion {
+    ion-card {
+        ion-card-header {
+            padding: 12px;
+        }
+        ion-card-content {
+            padding: 0px 14px;
+            max-height: 0px;
+        }
+    }
+
+    .abbrev {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #ccc;
+        color: black;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        font-size: 1.0em;
+    }
+
+    .book-name{
+        font-size: 1em;
+        margin-left: 12px;
+        font-weight: bold;
+    }
+
+    ion-grid{
+        ion-row{
+            display: inline-flex;
+            align-items: center;
+            ion-col {
+                display: inline-flex;
+            }
+        }
+    }
+}

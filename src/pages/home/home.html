@@ -1,14 +1,11 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Bíblia Sagrada
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <books-accordion *ngFor="let book of books" [book]="book"></books-accordion>
 </ion-content>

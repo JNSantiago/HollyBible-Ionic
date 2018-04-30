@@ -1,0 +1,21 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ bookName }} (capítulo {{chapterNumber + 1}})</ion-title>
+    <ion-buttons end>
+        <button ion-button icon-only (click)="closeModal()">
+            <ion-icon item-right name="ios-close-outline"></ion-icon>
+        </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let versicle of chapter; let i = index;" text-wrap (press)="selectVersicle(versicle)">
+      {{i + 1}} - {{versicle}}
+    </ion-item>
+  </ion-list>
+</ion-content>
