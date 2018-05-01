@@ -14,6 +14,7 @@ export class ChapterDetailPage {
   bookName: string = '';
   chapterNumber: string = '';
   lottieConfig:any;
+  marks: number[] = [];
 
   constructor(
     public navCtrl: NavController, 
@@ -23,7 +24,6 @@ export class ChapterDetailPage {
     this.chapter = navParams.get('chapter');
     this.bookName = navParams.get('bookName');
     this.chapterNumber = navParams.get('chapterNumber');
-
     LottieAnimationViewModule.forRoot();
   }
 
@@ -39,6 +39,7 @@ export class ChapterDetailPage {
         autoplay: true,
         loop: false
       }
+      this.marks.push(versicle)
       setTimeout(() => this.lottieConfig = null, 2000);
     })
   }

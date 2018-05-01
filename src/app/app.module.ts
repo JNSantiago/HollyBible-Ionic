@@ -11,13 +11,19 @@ import { HomePage } from '../pages/home/home';
 import { ComponentsModule } from '../components/components.module';
 import { ChapterDetailPage } from '../pages/chapter-detail/chapter-detail';
 import { PopoverPage } from '../pages/popover/popover';
+import { SettingsPage } from '../pages/settings/settings';
+import { MarksPage } from '../pages/marks/marks';
+import { TabsPage } from '../pages/tabs/tabs';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     ChapterDetailPage,
-    PopoverPage
+    PopoverPage,
+    SettingsPage,
+    MarksPage,
+    TabsPage
   ],
   imports: [
     BrowserModule,
@@ -31,7 +37,10 @@ import { PopoverPage } from '../pages/popover/popover';
     MyApp,
     HomePage,
     ChapterDetailPage,
-    PopoverPage
+    PopoverPage,
+    SettingsPage,
+    MarksPage,
+    TabsPage
   ],
   providers: [
     StatusBar,

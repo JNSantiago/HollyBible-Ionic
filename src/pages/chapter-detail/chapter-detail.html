@@ -1,7 +1,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>{{ bookName }} (capítulo {{chapterNumber + 1}})</ion-title>
+    <ion-title>{{ bookName }} {{chapterNumber + 1}}:1-{{chapter.length}}</ion-title>
     <ion-buttons end>
         <button ion-button icon-only (click)="closeModal()">
             <ion-icon item-right name="ios-close-outline"></ion-icon>
@@ -21,7 +21,8 @@
     class="lottieMarked">
   </lottie-animation-view>
   <ion-list>
-    <ion-item *ngFor="let versicle of chapter; let i = index;" text-wrap (press)="selectVersicle(versicle)">
+    <ion-item *ngFor="let versicle of chapter; let i = index;" text-wrap (press)="selectVersicle(i)">
+      <ion-icon *ngIf="marks.indexOf(i) > -1" style="float: right; position: relative;" name="bookmark"></ion-icon>
       {{i + 1}} - {{versicle}}
     </ion-item>
   </ion-list>
